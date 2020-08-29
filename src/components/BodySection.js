@@ -15,8 +15,6 @@ class BodySection extends Component{
                 <FullConversation></FullConversation>
                 <MediaSection></MediaSection>
             </div>
-            
-
         )
     }
 }

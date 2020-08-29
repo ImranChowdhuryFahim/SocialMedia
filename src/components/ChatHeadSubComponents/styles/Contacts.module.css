@@ -1,0 +1,15 @@
+.Contacts{
+
+}
+.Label{
+    align-items: center;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, .34);
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    padding: 0 16px;
+    text-transform: uppercase;
+
+}
