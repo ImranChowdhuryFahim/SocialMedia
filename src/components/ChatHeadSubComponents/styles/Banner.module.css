@@ -1,0 +1,31 @@
+.Banner{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 60px;
+    overflow: hidden;
+    padding: 10px 16px 10px 16px;
+    background-color: #ffffff;
+    font-size: 14px;
+    justify-content: space-between;
+    position: sticky;
+   
+}
+
+img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.Chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+h1{
+    padding:0 1rem 0 1rem;
+}
+
