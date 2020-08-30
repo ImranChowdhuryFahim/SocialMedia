@@ -1,4 +1,7 @@
 .Contacts{
+    overflow-y: hidden;
+    height: 100%;
+    direction: ltr;
 
 }
 .Label{
