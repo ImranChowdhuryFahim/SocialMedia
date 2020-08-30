@@ -1,0 +1,7 @@
+.compose-message {
+  background: rgb(235, 232, 232);
+  height: 9%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
