@@ -1,5 +1,5 @@
 .Contacts{
-    overflow-y: scroll;
+    overflow: hidden;
     height: 100%;
     direction: ltr;
 
