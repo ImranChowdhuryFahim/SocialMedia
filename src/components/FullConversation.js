@@ -1,13 +1,15 @@
-import React,{ Component } from 'react'
-import styles from '../styles/FullConversation.module.css'
+import React, { Component } from "react";
+import MessageList from "./MessageList";
+import styles from "../styles/FullConversation.module.css";
 
-class FullConversation extends Component{
-    render()
-    {
-        return(
-            <div className={styles.FullConversation}></div>
-        )
-    }
+class FullConversation extends Component {
+  render() {
+    return (
+      <div className={styles.FullConversation}>
+        <MessageList />
+      </div>
+    );
+  }
 }
 
-export default FullConversation
+export default FullConversation;
