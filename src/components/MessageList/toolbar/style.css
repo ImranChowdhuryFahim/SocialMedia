@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.tool-bar {
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.person-info {
+  margin: 5px;
+  height: 40px;
+  display: flex;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+.text-info {
+  height: 100%;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.status {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 2px;
+  vertical-align: middle;
+}
+
+.icons-message {
+}
+
+ul#horizontal-list {
+  /* background-color: peru;
+  margin: 5px;
+  height: 40px; */
+  margin: 5px;
+  padding-bottom: 25px;
+}
+ul#horizontal-list li {
+  display: inline-block;
+  padding-left: 30px;
+  color: white;
+  cursor: pointer;
+}
