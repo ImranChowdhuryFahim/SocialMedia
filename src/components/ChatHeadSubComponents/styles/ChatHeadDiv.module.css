@@ -10,6 +10,9 @@
     height: 70px;
 
 }
+.ChatHeadDiv:hover{
+    background-color: #f2f2f2;
+}
 .ProfilePicture{
     height: 50px;
     width: 50px;
