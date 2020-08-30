@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Imran from './Imran.jpg'
 
 const Toolbar = () => {
   return (
@@ -7,13 +8,13 @@ const Toolbar = () => {
       <div className="tool-bar">
         <div className="person-info">
           <img
-            src="https://via.placeholder.com/500"
+            src={Imran}
             alt=""
             className="round-img"
           />
           <div className="text-info">
             <div>
-              <h3>Imran Bandor</h3>
+              <h3>Imran Chowdhury</h3>
             </div>
             <div className="status">Active Now</div>
           </div>
