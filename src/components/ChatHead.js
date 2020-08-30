@@ -9,17 +9,13 @@ class ChatHead extends Component{
     {
         return(
             <div className={styles.ChatHead}>
-                
-                
                 <Banner></Banner>
-                
+
                 <SearchBar></SearchBar>
 
                 <Contacts></Contacts>
                 
-
             </div>
-            
         )
     }
 }

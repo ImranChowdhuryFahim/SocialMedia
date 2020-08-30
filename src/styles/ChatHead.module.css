@@ -1,7 +1,7 @@
 .ChatHead{
     background-color: yellow;
     width: 25%;
-    overflow-y: auto;
+    overflow: hidden;
     
 }
 
