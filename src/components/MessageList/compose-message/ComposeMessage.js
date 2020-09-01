@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
+import EmojiPicker from "./EmojiPicker";
 
 const ComposeMessage = () => {
+  const [message, setMessage] = useState("");
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(message, "********");
+  };
+
   return (
     <div className="compose-message">
       <form
         action=""
+        onSubmit={handleSubmit}
         style={{
           width: "100%",
           display: "flex",
@@ -15,6 +25,11 @@ const ComposeMessage = () => {
       >
         <input
           type="text"
+          value={message}
+          onChange={(e) => {
+            setMessage(e.target.value);
+            console.log(message);
+          }}
           style={{
             padding: "5px",
             margin: "10px",
@@ -25,13 +40,21 @@ const ComposeMessage = () => {
           }}
           placeholder="Write something"
         />
-        <a
+        {showEmojiPicker ? (
+          <EmojiPicker
+            setMessage={setMessage}
+            message={message}
+            setShowEmojiPicker={setShowEmojiPicker}
+          />
+        ) : null}
+        <button
           aria-label="Choose an emoji"
-          class="_30yy _7odb"
-          role="button"
           title="Choose an emoji"
-          data-testid="m4_emoji_button"
-          href="#"
+          style={{ border: "none" }}
+          onClick={(e) => {
+            e.preventDefault();
+            setShowEmojiPicker(true);
+          }}
         >
           <svg height="24px" width="24px" viewBox="0 0 26 26">
             <g fill="none" fill-rule="evenodd">
@@ -42,8 +65,8 @@ const ComposeMessage = () => {
               ></path>
             </g>
           </svg>
-        </a>
-        <svg class="_7oal" height="24" width="24" viewBox="0 0 24 24">
+        </button>
+        <svg height="24" width="24" viewBox="0 0 24 24">
           <g fill="none" fill-rule="evenodd">
             <polygon points="-6,30 30,30 30,-6 -6,-6 "></polygon>
             <path
@@ -52,7 +75,7 @@ const ComposeMessage = () => {
             ></path>
           </g>
         </svg>
-        <svg class="_7oal" height="36px" width="36px" viewBox="0 0 36 36">
+        <svg height="36px" width="36px" viewBox="0 0 36 36">
           <g fill="none" fill-rule="evenodd">
             <g id="Group">
               <polygon points="0 36 36 36 36 0 0 0"></polygon>

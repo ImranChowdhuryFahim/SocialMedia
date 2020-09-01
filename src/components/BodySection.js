@@ -3,6 +3,7 @@ import styles from "../styles/BodySection.module.css";
 import ChatHead from "./ChatHead";
 import FullConversation from "./FullConversation";
 import MediaSection from "./MediaSection";
+import EmojiPicker from "./MessageList/compose-message/EmojiPicker";
 
 class BodySection extends Component {
   render() {
