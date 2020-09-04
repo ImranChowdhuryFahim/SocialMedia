@@ -1,18 +1,18 @@
 .ChatHeadDiv{
-    background-color: #ffffff;
-    border-radius: 10px;
-    min-width: 0;
-    padding-left: 8px;
+    background-color: transparent;
+    /* border-radius: 10px; */
+    /* min-width: 0; */
+    /* padding-left: 8px;
     padding-right: 8px;
-    margin: 8px;
+    margin: 8px; */
     display: flex;
     align-items: center;
     height: 70px;
+    cursor: pointer;
 
 }
-.ChatHeadDiv:hover{
-    background-color: #f2f2f2;
-}
+
+
 .ProfilePicture{
     height: 50px;
     width: 50px;
@@ -33,6 +33,7 @@
     flex-direction: row;
     color: #999999;
     font-size: 13px;
+    padding-left: 12px;
 }
 .LastMsg{
     padding-right: 1vh;
