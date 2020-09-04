@@ -73,9 +73,14 @@ class Contacts extends Component{
                 <li data-id={chats.Id} onMouseDown={this.onItemClick.bind(this)} className="Contactshead">  <ContactHead key={chats.Id} name={chats.Name} src={chats.Src} ></ContactHead></li>
             ))
             
-            section=<ul>
+            section=<div>
+            <div className="Label">
+                    Contacts
+                </div>
+            <ul>
                 {section}
             </ul>
+            </div>
         }
          
 

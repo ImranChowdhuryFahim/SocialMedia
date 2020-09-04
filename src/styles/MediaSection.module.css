@@ -1,5 +1,6 @@
 .MediaSection{
-    background-color: brown;
+    background-color: white;
     height: 100%;
     width: 25%;
+    border-left: 1px solid #e5e5e5;
 }
