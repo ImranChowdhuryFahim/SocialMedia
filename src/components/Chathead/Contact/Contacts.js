@@ -1,4 +1,4 @@
-import React,{ Component ,useContext} from 'react'
+import React,{ Component } from 'react'
 import './Contacts.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -37,7 +37,7 @@ class Contacts extends Component{
     
      onItemClick(e) {
         // this.setState({ activeid: e.currentTarget.dataset.id });
-        this.context.updateCurrentActive(e.currentTarget.dataset.id)
+        this.context.updateCurrentActive(parseInt(e.currentTarget.dataset.id))
     }
 
     
@@ -58,7 +58,7 @@ class Contacts extends Component{
 
         if(check){
             section=chatheads.map(chats=>(
-            <li data-id={chats.Id} onClick={this.onItemClick.bind(this)} className={chats.Id==this.context.currentactive?"on":"off"}> <ChatHeadDiv id={chats.Id}  name={chats.Name} lastmsg={chats.LastMessage} time={chats.Time} src={chats.Src}  ></ChatHeadDiv></li>
+            <li data-id={chats.Id} key={chats.Id} onClick={this.onItemClick.bind(this)} className={chats.Id===this.context.currentactive?"on":"off"}> <ChatHeadDiv id={chats.Id}  name={chats.Name} lastmsg={chats.LastMessage} time={chats.Time} src={chats.Src}  ></ChatHeadDiv></li>
                 
             ))
 
@@ -70,7 +70,7 @@ class Contacts extends Component{
 
         else{
             section= filtersearch.map(chats=>(
-                <li data-id={chats.Id} onMouseDown={this.onItemClick.bind(this)} className="Contactshead">  <ContactHead key={chats.Id} name={chats.Name} src={chats.Src} ></ContactHead></li>
+                <li data-id={chats.Id} key={chats.Id} onMouseDown={this.onItemClick.bind(this)} className="Contactshead">  <ContactHead key={chats.Id} name={chats.Name} src={chats.Src} ></ContactHead></li>
             ))
             
             section=<div>

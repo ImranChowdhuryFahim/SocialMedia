@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
 import './ContactHead.css'
-import moti from '../AbdMatin.jpg'
+// import moti from '../AbdMatin.jpg'
 
 class ContactHead extends Component{
     render()

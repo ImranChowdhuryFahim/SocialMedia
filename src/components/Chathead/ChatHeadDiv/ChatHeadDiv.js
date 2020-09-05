@@ -1,6 +1,6 @@
-import React ,{ Component , useContext} from 'react'
+import React ,{ Component } from 'react'
 import  './ChatHeadDiv.css'
-import puppy from '../puppy.jpg'
+// import puppy from '../puppy.jpg'
 
 
 class ChatHeadDiv extends Component{
