@@ -48,6 +48,8 @@ const ComposeMessage = () => {
           />
         ) : null}
         <button
+          type="button"
+          className="emoji-btn"
           aria-label="Choose an emoji"
           title="Choose an emoji"
           style={{ border: "none" }}
@@ -56,7 +58,7 @@ const ComposeMessage = () => {
             setShowEmojiPicker(true);
           }}
         >
-          <svg height="24px" width="24px" viewBox="0 0 26 26">
+          <svg height="24px" width="24px" viewBox="0 0 28 25">
             <g fill="none" fill-rule="evenodd">
               <polygon points="0,26 26,26 26,0 0,0 "></polygon>
               <path
