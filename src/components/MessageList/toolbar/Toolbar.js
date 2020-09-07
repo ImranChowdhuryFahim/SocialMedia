@@ -22,7 +22,7 @@ const Toolbar = () => {
         <div className="icons-message">
           <ul id="horizontal-list">
             <li>
-              <a class="_30yy" role="button" href="#">
+              <a className="_30yy" role="button" href="#">
                 <div
                   aria-label="Start a voice call"
                   title="Start a voice call"
@@ -33,9 +33,9 @@ const Toolbar = () => {
                     <g
                       id="phone"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                     >
                       <polygon
                         id="Fill-8"
@@ -63,9 +63,9 @@ const Toolbar = () => {
                     <g
                       id="camcorder"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                     >
                       <polygon
                         id="Fill-8"
@@ -80,30 +80,30 @@ const Toolbar = () => {
                   </svg>
                 </div>
               </a>
-              <div class="_3qfl"></div>
+              <div className="_3qfl"></div>
             </li>
             <li>
               <a
                 aria-expanded="true"
                 aria-label="Conversation Information"
-                class="_30yy"
+                className="_30yy"
                 role="button"
                 title="Conversation Information"
                 data-testid="info_panel_button"
                 href="#"
               >
-                <div class="_6yms">
+                <div className="_6yms">
                   <div
-                    class="_6y4z"
+                    className="_6y4z"
                     style={{ height: "32px", width: "32px" }}
                   ></div>
                   <svg height="32px" width="32px" viewBox="0 0 36 36">
                     <g
                       id="info-circle"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                     >
                       <g id="Group">
                         <polygon

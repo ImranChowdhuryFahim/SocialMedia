@@ -1,32 +1,35 @@
 import React ,{ Component } from 'react'
-import styles from './styles/ChatHeadDiv.module.css'
-import puppy from './puppy.jpg'
+import  './ChatHeadDiv.css'
+// import puppy from '../puppy.jpg'
+
 
 class ChatHeadDiv extends Component{
     render()
     {
+        
         return(
-            <div className={styles.ChatHeadDiv}>
+           
+            <div className="ChatHeadDiv" onClick={this.props.onClick}>
                 <div >
-                    <img src={ puppy } alt="puppy" className={styles.ProfilePicture}></img>
+                    <img src={ this.props.src } alt="puppy" className="ProfilePicture"></img>
                 </div>
-                <div className={styles.Details}>
-                    <div className={styles.ProfileName}>
+                <div className="Details">
+                    <div className="ProfileName">
                         <span >
-                            Abdul Matin
+                            {this.props.name}
                         </span>
                     </div>
                     
-                    <div className={styles.TimeMsg}>
-                        <div className={styles.LastMsg}>
+                    <div className="TimeMsg">
+                        <div className="LastMsg">
                             <span >
-                                Update kore Kaj korish
+                                {this.props.lastmsg}
                             </span>
                         </div>
                         .
-                        <div className={styles.Time}>
+                        <div className="Time">
                             <span >
-                                12:04  PM
+                                {this.props.time}
                             </span>
                         </div>
                         
@@ -38,5 +41,6 @@ class ChatHeadDiv extends Component{
         )
     }
 }
+
 
 export default ChatHeadDiv
