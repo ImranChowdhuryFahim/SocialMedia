@@ -40,9 +40,10 @@ export class ChatProvider extends Component {
             "https://scontent.fdac74-1.fna.fbcdn.net/v/t1.0-1/cp0/p60x60/115824790_2908560592599434_1021743797251165316_n.jpg?_nc_cat=111&_nc_sid=7206a8&_nc_ohc=U3m47UAZUyQAX8mD9gx&_nc_ht=scontent.fdac74-1.fna&oh=2a0f86aceb023feab07314e5d2309a65&oe=5F76B3F9",
         },
       ],
-      CurrentActive: 1,
+      CurrentActive: 1
     };
   }
+
 
   updateCurrentActive(e) {
     this.setState({ CurrentActive: e });

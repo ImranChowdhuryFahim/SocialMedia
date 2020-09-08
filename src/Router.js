@@ -6,15 +6,28 @@ import RegisterApp from './Authentication/SingUp'
 import Auth from './Auth'
 
 
-class Root extends Component{
+class Router extends Component{
+
     
     render()
     {
+        console.log("ami router e")
+        console.log(Auth.getAuth())
         const PrivateRoute = ({ component: Component, ...rest }) => (
-            <Route {...rest} render={props =>
-            true ? (<Component {...props} />) : (<Redirect to={{ pathname: "/"}}/> )}
-            />
-            );
+            <Route
+              {...rest}
+              render={props =>
+              true   ? (                                     //Auth.getAuth()
+                  <Component {...props} />
+                ) : (
+                  <Redirect
+                    to={{
+                      pathname: "/"
+                    }}
+                  />
+                )
+              }
+            />);
         return(
             
             <Switch>
@@ -25,6 +38,7 @@ class Root extends Component{
             <Route component={()=>"404 Not Found"} path="*"></Route>
             </Switch>
 
+
         )
         
     }
@@ -33,4 +47,5 @@ class Root extends Component{
 }
 
 
-export default Root
+
+export default Router

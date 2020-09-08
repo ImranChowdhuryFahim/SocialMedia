@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../../Auth.css"
-import {Link,Redirect} from 'react-router-dom'
+import {Link,withRouter} from 'react-router-dom'
 import Auth from '../../../Auth'
 
 class Login extends Component{
@@ -21,7 +21,10 @@ class Login extends Component{
     handleSubmit(event)
     {
         event.preventDefault()
-        console.log(this.state)
+        const {history }= this.props
+        Auth.authenticate();
+        history.push('/messages')
+        
         // fetch('https://updownmediaapi.herokuapp.com/api/login',
         // {
         //     method: 'POST',
@@ -36,9 +39,8 @@ class Login extends Component{
         //     if(result)
         //     {
         //         console.log(result)
-        //         Auth.Authenticate();
-        //         console.log(Auth.getAuth())
-        //         this.props.history.push('/messages')
+        //         Auth.authenticate();
+        //         history.push('/messages')
         //     }
         //     else{
 
@@ -78,4 +80,4 @@ class Login extends Component{
     }
 }
 
-export default Login
+export default withRouter(Login)
