@@ -1,54 +1,56 @@
 import React, { useState, useContext, useEffect } from "react";
-import "./style.css";
 import EmojiPicker from "./EmojiPicker";
 import { ThemeContext } from "../../providers/ThemeContext";
+import ImagePreview from "./ImagePreview";
+import "./style.css";
 
 const ComposeMessage = () => {
   const [message, setMessage] = useState("");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-  const [theme, setTheme] = useContext(ThemeContext);
-  const [image, setImage] = useState(null);
-  const [otherFiles, setOtherFiles] = useState(null);
+  const [_, setTheme] = useContext(ThemeContext);
+  const [images, setImages] = useState([]);
+  const [otherFiles, setOtherFiles] = useState([]);
 
   const handleImageInput = (event) => {
-    setTheme({ allMessagesHeight: "73%" });
-    setImage(event.target);
+    setTheme({ allMessagesHeight: "70%" });
+    let updatedImage = images;
+    images.push(event.target.files[0]);
+    setImages(updatedImage);
+  };
+
+  const handleRemoveImage = (name) => {
+    setImages((prev) => {
+      const current = prev.filter((image) => {
+        console.log(image.name, name, image.name != name);
+        return image.name !== name;
+      });
+      return current;
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(message, "********");
-    // console.log(imageInputFiles());
   };
 
-  // useEffect(() => {
-  //   if (!image && !otherFiles) setTheme({ allMessagesHeight: "83%" });
-  // }, [setImage, setOtherFiles, image, otherFiles, theme, setTheme]);
+  useEffect(() => {
+    if (!images.length && !otherFiles.length)
+      setTheme({ allMessagesHeight: "82%" });
+  }, [images, otherFiles, setTheme]);
 
   return (
     <>
-      {image || otherFiles ? (
+      {images.length !== 0 || otherFiles.length !== 0 ? (
         <div className="added-file-preview">
-          {image ? (
-            <>
-              <img
-                className="image-preview"
-                src={URL.createObjectURL(image.files[0])}
-                alt=""
-              />
-              <button
-                className="remove-attachment-btn"
-                label="Remove attachement"
-                title="Remove attachement"
-                onClick={(e) => {
-                  setImage(null);
-                  setTheme({ allMessagesHeight: "83%" });
-                }}
-              >
-                x
-              </button>
-            </>
-          ) : null}
+          {images.map((image) => (
+            <ImagePreview
+              imageURL={URL.createObjectURL(image)}
+              key={image.name}
+              name={image.name}
+              removeImage={handleRemoveImage}
+              setImage={setImages}
+              setTheme={setTheme}
+            />
+          ))}
         </div>
       ) : null}
       <div className="compose-message">
