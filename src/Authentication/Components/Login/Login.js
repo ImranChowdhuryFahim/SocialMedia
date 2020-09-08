@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import "../../Auth.css"
-import {Link} from 'react-router-dom'
+import {Link,Redirect} from 'react-router-dom'
+import Auth from '../../../Auth'
 
 class Login extends Component{
-    constructor()
+    constructor(props)
     {
-        super()
+        super(props)
         this.state = {
             email : "",
             password : ""
@@ -21,6 +22,28 @@ class Login extends Component{
     {
         event.preventDefault()
         console.log(this.state)
+        // fetch('https://updownmediaapi.herokuapp.com/api/login',
+        // {
+        //     method: 'POST',
+        //     headers: {
+        //         'Accept': 'application/json',
+        //          'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify({email: this.state.email, password: this.state.password})
+ 
+        // }
+        // ).then(res=>res.json()).then(result=> {
+        //     if(result)
+        //     {
+        //         console.log(result)
+        //         Auth.Authenticate();
+        //         console.log(Auth.getAuth())
+        //         this.props.history.push('/messages')
+        //     }
+        //     else{
+
+        //     }
+        // })
     }
 
     render()
