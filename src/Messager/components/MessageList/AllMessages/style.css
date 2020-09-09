@@ -1,4 +1,68 @@
 .all-messages {
   background-color: rgb(255, 255, 255);
-  position: relative;
+  overflow-y: hidden;
+  /* position: relative; */
 }
+
+.all-messages:hover{
+  overflow-y: auto;
+}
+
+.all-messages::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    
+}
+
+.all-messages::-webkit-scrollbar
+{
+    width: 7px;
+    background-color: #ffffff;
+}
+
+.all-messages::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: rgb(153, 149, 149);
+    
+}
+
+.recieved{
+  background-color: #f1f0f0;
+  width: fit-content;
+  padding: 10px;
+  margin:10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: block;
+  position: relative;
+  border-top-left-radius: 1.3em;
+  border-bottom-right-radius: 1.3em;
+  border-top-right-radius: 1.3em;
+  max-width: 70%;
+  font-size: 15px;
+  float: left;
+  clear: both;
+}
+
+.sent{
+  background-color:#0e97fa;
+  color: #fef8ff;
+  width: fit-content;
+  padding: 10px;
+  margin:10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: block;
+  position: relative;
+  border-top-right-radius: 1.3em;
+  border-bottom-left-radius: 1.3em;
+  border-top-left-radius: 1.3em;
+  max-width: 70%;
+  font-size: 15px;
+  float: right;
+  clear: both;
+}
+
