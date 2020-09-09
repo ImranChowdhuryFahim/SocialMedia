@@ -1,17 +1,13 @@
 import React from "react";
 import "./style.css";
-import Imran from './Imran.jpg'
+import Imran from "./Imran.jpg";
 
 const Toolbar = () => {
   return (
     <>
       <div className="tool-bar">
         <div className="person-info">
-          <img
-            src={Imran}
-            alt=""
-            className="round-img"
-          />
+          <img src={Imran} alt="" className="round-img" />
           <div className="text-info">
             <div>
               <h3>Imran Chowdhury</h3>
@@ -97,26 +93,23 @@ const Toolbar = () => {
                     className="_6y4z"
                     style={{ height: "32px", width: "32px" }}
                   ></div>
-                  <svg height="32px" width="32px" viewBox="0 0 36 36">
-                    <g
-                      id="info-circle"
-                      fill="none"
-                      fillRule="evenodd"
-                      stroke="none"
-                      strokeWidth="1"
-                    >
-                      <g id="Group">
-                        <polygon
-                          id="Fill-8"
-                          points="0 36 36 36 36 0 0 0"
-                        ></polygon>
-                        <path
-                          id="Fill-17"
-                          d="M18,10 C16.6195,10 15.5,11.119 15.5,12.5 C15.5,13.881 16.6195,15 18,15 C19.381,15 20.5,13.881 20.5,12.5 C20.5,11.119 19.381,10 18,10 Z M16,25 C16,25.552 16.448,26 17,26 L19,26 C19.552,26 20,25.552 20,25 L20,18 C20,17.448 19.552,17 19,17 L17,17 C16.448,17 16,17.448 16,18 L16,25 Z M18,30 C11.3725,30 6,24.6275 6,18 C6,11.3725 11.3725,6 18,6 C24.6275,6 30,11.3725 30,18 C30,24.6275 24.6275,30 18,30 Z"
-                          fill="#0099ff"
-                        ></path>
-                      </g>
-                    </g>
+                  <svg
+                    aria-labelledby="svg-inline--fa-title-iM1yTumX0i0X"
+                    data-prefix="far"
+                    data-icon="sign-in-alt"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="50 50 512 512"
+                    // class="svg-inline--fa fa-sign-in-alt fa-w-16 fa-fw fa-lg"
+                  >
+                    <title id="svg-inline--fa-title-iM1yTumX0i0X" class="">
+                      Flip Left
+                    </title>
+                    <path
+                      fill="#0099ff"
+                      d="M144 112v51.6H48c-26.5 0-48 21.5-48 48v88.6c0 26.5 21.5 48 48 48h96v51.6c0 42.6 51.7 64.2 81.9 33.9l144-143.9c18.7-18.7 18.7-49.1 0-67.9l-144-144C195.8 48 144 69.3 144 112zm192 144L192 400v-99.7H48v-88.6h144V112l144 144zm80 192h-84c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h84c26.5 0 48-21.5 48-48V160c0-26.5-21.5-48-48-48h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96z"
+                      class=""
+                    ></path>
                   </svg>
                 </div>
               </a>

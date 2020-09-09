@@ -11,7 +11,7 @@ class BodySection extends Component {
       <div className={styles.BodySection}>
         <ChatHead></ChatHead>
         <FullConversation />
-        <MediaSection></MediaSection>
+        <MediaSection />
       </div>
     );
   }
