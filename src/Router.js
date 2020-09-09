@@ -13,7 +13,7 @@ class Router extends Component {
       <Route
         {...rest}
         render={(props) =>
-          true ? ( //Auth.getAuth()
+          Auth.getAuth() ? ( //Auth.getAuth()
             <Component {...props} />
           ) : (
             <Redirect

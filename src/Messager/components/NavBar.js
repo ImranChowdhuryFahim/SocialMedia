@@ -1,7 +1,16 @@
 import React,{ Component } from 'react'
 import styles from '../styles/NavBar.module.css'
+import { withRouter } from 'react-router-dom'
+import Auth from '../../Auth'
+
 
 class NavBar extends Component{
+    logout()
+    {
+        const { history } = this.props
+        history.push('/')
+        Auth.signout()
+    }
     render()
     {
         return(
@@ -11,7 +20,7 @@ class NavBar extends Component{
                     <ul className={styles.NavBar}>
                         <li>UserName</li>
                         <li>Home</li>
-                        <li>Logout</li>
+                        <li onClick={this.logout.bind(this)}>Logout</li>
                     </ul>
                 </nav>
             </div>
@@ -19,4 +28,4 @@ class NavBar extends Component{
     }
 }
 
-export default NavBar
+export default withRouter(NavBar)
