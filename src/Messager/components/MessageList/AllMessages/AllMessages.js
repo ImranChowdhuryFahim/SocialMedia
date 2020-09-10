@@ -17,30 +17,30 @@ const AllMessages = () => {
   
   return (   
                     <div className="all-messages" style={{ height: theme.allMessagesHeight }}>
-                    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv> 
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Id}></MessageDiv>  
-    <MessageDiv cls="recieved" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
-    <MessageDiv cls="sent" msg={value.chatheads[value.currentactive -1].Id}></MessageDiv> 
+                    <MessageDiv cls="sent" dir="right" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right"  msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right"  msg={value.chatheads[value.currentactive -1].Name}> </MessageDiv>
+    <MessageDiv cls="sent" dir="right"  msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right"  msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent"dir="right"  msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent"dir="right"  msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>
+    <MessageDiv cls="sent"dir="right"  msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv> 
+    <MessageDiv cls="sent"dir="right"  msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Id}></MessageDiv>  
+    <MessageDiv cls="recieved" dir="left" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right" msg={value.chatheads[value.currentactive -1].Name}></MessageDiv>  
+    <MessageDiv cls="sent" dir="right" msg={value.chatheads[value.currentactive -1].Id}></MessageDiv> 
                         <div
                             ref={messagesEnd}
                             style={{ float: "left", clear: "both" }}

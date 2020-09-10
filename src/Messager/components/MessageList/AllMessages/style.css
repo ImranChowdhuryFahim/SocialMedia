@@ -1,7 +1,6 @@
 .all-messages {
   background-color: rgb(255, 255, 255);
-  overflow-y: hidden;
-  
+  overflow: hidden;
 }
 
 .all-messages:hover{
@@ -29,7 +28,7 @@
     
 }
 
-.recieved{
+.msgrecieved{
   background-color: #f1f0f0;
   width: fit-content;
   padding: 10px;
@@ -47,7 +46,7 @@
   clear: both;
 }
 
-.sent{
+.msgsent{
   background-color:#0e97fa;
   color: #fef8ff;
   width: fit-content;
@@ -65,4 +64,91 @@
   float: right;
   clear: both;
 }
+
+.msgrowsent{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.invisibledivsent{
+  display: flex;
+  flex-direction: row-reverse;
+  visibility: hidden;
+
+}
+
+.msgrowrecieved{
+  display: flex;
+  align-items: center;
+
+}
+
+.invisibledivrecieved
+{
+  display: flex;
+  visibility: hidden;
+}
+
+.msgrowsent:hover  .invisibledivsent{
+  visibility: visible;
+}
+
+.msgrowrecieved:hover .invisibledivrecieved{
+  visibility: visible;
+}
+
+.svgbutton{
+  background: transparent;
+  
+  align-items: center;
+    background-color: none;
+    border-radius: 99px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
+    border: none;
+    outline: none;
+    
+}
+
+.svgbutton:hover, .svgbutton:hover path{
+  background: rgba(0, 132, 255, .2);
+ fill: black;
+ transition: all ease 0.3s;
+ 
+}
+
+/* .tooltip{
+  display: inline;
+  position: relative;
+}
+
+.tooltip:hover::after{
+  position: absolute;
+  background: #0c0f12 ;
+  border-radius: 2px;
+  color: #fff;
+  content: attr(data-tooltip);
+  right: 50%;
+  left: -16%;
+  bottom: 3.4em;
+  font-size: 12px;
+  padding: 6px;
+  width: fit-content;
+
+  
+}
+.tooltip:hover::before{
+  border: solid;
+  border-color: #0c0f12 transparent;
+  border-width: 6px 4px 0 4px;
+  content: "";
+  left: 35%;
+  bottom: 35px;
+  position: absolute;
+}  */
 
