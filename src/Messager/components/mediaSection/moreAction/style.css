@@ -1,0 +1,32 @@
+.more-action {
+  border-bottom: 0.3px solid rgb(219, 211, 211);
+}
+
+.more-action-header {
+  margin: 2px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.more-action-title {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.34);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.more-action-header:hover {
+  background-color: rgba(12, 12, 12, 0.05);
+  cursor: pointer;
+}
+
+.caret {
+  transition: transform 0.9s ease-out;
+}
+
+.more-action-header:focus {
+}

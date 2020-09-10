@@ -1,0 +1,21 @@
+.more-action-items-container {
+  padding: 5px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.more-action-item-text {
+  display: flex;
+}
+
+.more-action-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.more-action-item:hover {
+  cursor: pointer;
+}
