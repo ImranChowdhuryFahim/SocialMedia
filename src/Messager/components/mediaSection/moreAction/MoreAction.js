@@ -12,7 +12,7 @@ const MoreAction = () => {
         aria-label="More Actions"
         aria-expanded="true"
         role="button"
-        tabindex="0"
+        tabIndex="0"
         onClick={(e) => setIsCaretLeftlined(!isCaretLeftOutOutlined)}
       >
         <span className="more-action-title">More Action</span>
@@ -21,7 +21,7 @@ const MoreAction = () => {
           aria-expanded="true"
           className="caret"
           role="button"
-          tabindex="0"
+         tabIndex="0"
           onClick={(e) => setIsCaretLeftlined(!isCaretLeftOutOutlined)}
         >
           {isCaretLeftOutOutlined ? (

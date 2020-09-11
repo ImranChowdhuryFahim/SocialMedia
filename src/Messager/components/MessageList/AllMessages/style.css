@@ -74,7 +74,7 @@
 .invisibledivsent{
   display: flex;
   flex-direction: row-reverse;
-  visibility: hidden;
+  display: none;
 
 }
 
@@ -87,16 +87,24 @@
 .invisibledivrecieved
 {
   display: flex;
-  visibility: hidden;
+  display: none;
 }
 
 .msgrowsent:hover  .invisibledivsent{
-  visibility: visible;
+  display: inline-flex !important;
 }
 
 .msgrowrecieved:hover .invisibledivrecieved{
-  visibility: visible;
+  display: inline-flex !important;
 }
+
+/* .msgrowsent:active  .invisibledivsent{
+  display: inline-flex !important;
+}
+
+.msgrowrecieved:active .invisibledivrecieved{
+  display: inline-flex !important;
+} */
 
 .svgbutton{
   background: transparent;
@@ -122,7 +130,9 @@
  
 }
 
-/* .tooltip{
+
+
+.tooltip{
   display: inline;
   position: relative;
 }
@@ -139,7 +149,8 @@
   font-size: 12px;
   padding: 6px;
   width: fit-content;
-
+  z-index: 9999;
+  
   
 }
 .tooltip:hover::before{
@@ -150,5 +161,8 @@
   left: 35%;
   bottom: 35px;
   position: absolute;
-}  */
+} 
 
+.active{
+  display: inline-flex !important;
+}
