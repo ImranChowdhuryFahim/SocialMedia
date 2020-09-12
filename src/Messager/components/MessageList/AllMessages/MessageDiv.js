@@ -1,21 +1,28 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import "react-portal-hint/dist/default.css"
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-
+import "emoji-mart/css/emoji-mart.css";
+import data from 'emoji-mart/data/google.json'
+import { Picker, Emoji , NimblePicker} from "emoji-mart";
+import EmojiPicker from './EmojiPicker'
 
 class MessageDiv extends Component {
     constructor()
     {
         super()
         this.state ={
-            active : false
+            active : false,
+            Isemojipickershowing : false
         }
+       
     }
-    
+
     active()
     {
         this.setState({active: true})
+        this.setState({Isemojipickershowing: true})
 
     }
         
@@ -23,10 +30,21 @@ class MessageDiv extends Component {
     deactive()
     {
         this.setState({active: false})
+        
+    }
+    deactivepicker()
+    {
+        this.setState({Isemojipickershowing: false})
+    }
+
+    handleEmojiSelect(e)
+    {
+        console.log(e)
     }
 
     render() {
-       
+
+        
         return (
 
             <div data-tooltip="bla bla" >
@@ -40,7 +58,7 @@ class MessageDiv extends Component {
                     <div  className={(this.state.active===true?'active ':' ') + (this.props.cls === 'sent' ? "invisibledivsent": "invisibledivrecieved")}  >
                         <span>
                         <Tippy content={'React'} >    
-                            <button onMouseDown={this.active.bind(this)} onBlur={this.deactive.bind(this)}  className="svgbutton" data-tooltip="React">
+                            <button onMouseDown={this.active.bind(this)}  onBlur={this.deactive.bind(this)}  className="svgbutton" data-tooltip="React">
                                 <svg  height="22px" width="22px" viewBox="0 0 36 36"><g fill="none" fillRule="evenodd" stroke="none" strokeWidth="1"><polygon points="0 36 36 36 36 0 0 0"></polygon><path d="M14.4951,17.5 C13.5576,17.5 12.9951,16.75 12.9951,15.5 C12.9951,14.25 13.5576,13.5 14.4951,13.5 C15.4326,13.5 15.9951,14.25 15.9951,15.5 C15.9951,16.75 15.4326,17.5 14.4951,17.5 M21.4951,17.5 C20.5576,17.5 19.9951,16.75 19.9951,15.5 C19.9951,14.25 20.5576,13.5 21.4951,13.5 C22.4326,13.5 22.9951,14.25 22.9951,15.5 C22.9951,16.75 22.4326,17.5 21.4951,17.5 M18.0071,25.0055 C15.7176,25.0055 13.5461,23.9185 12.1981,22.0985 C11.8691,21.6545 11.9626,21.028 12.4061,20.6985 C12.8491,20.369 13.4756,20.4625 13.8041,20.9065 C14.7766,22.2195 16.3481,23.004 18.0071,23.004 C19.6666,23.004 21.2376,22.2195 22.2101,20.9065 C22.5386,20.4625 23.1656,20.3695 23.6086,20.698 C24.0516,21.0275 24.1451,21.6545 23.8166,22.0985 C22.4686,23.9185 20.2971,25.0055 18.0071,25.0055 M18.0001,8 C12.4771,8 8.0001,12.477 8.0001,18 C8.0001,23.523 12.4771,28 18.0001,28 C23.5231,28 28.0001,23.523 28.0001,18 C28.0001,12.477 23.5231,8 18.0001,8 M18.0001,30 C11.3726,30 6.0001,24.6275 6.0001,18 C6.0001,11.3725 11.3726,6 18.0001,6 C24.6276,6 30.0001,11.3725 30.0001,18 C30.0001,24.6275 24.6276,30 18.0001,30" fill="rgba(0, 0, 0, 0.34)"></path></g></svg>
                             </button>
                         </Tippy>                        </span>
@@ -58,10 +76,27 @@ class MessageDiv extends Component {
                             </button> 
                         </Tippy>     
                         </span>
+                        
                         </div>
+                        {this.state.Isemojipickershowing && (
+            //   <span ref={this.myRef} tabIndex = {0} onBlur={this.deactivepicker.bind(this)}>
+            //    <Picker set='facebook'
+            //    perLine={7}
+            //    showPreview={false}
+            //    showSkinTones={false}
+            //    include={["custom"]}
+            //    custom={customReactionEmojis} 
+            //    autoFocus={true}
+            //    onSelect={this.handleEmojiSelect.bind(this)}
+               
+               
+            //    />
+            //   </span>)}
+                       <EmojiPicker setMessage ={this.handleEmojiSelect} setShowEmojiPicker={this.deactivepicker.bind(this)}></EmojiPicker> )}
                     </div>
+                    
                 </div>
-
+                
             </div>
             
         )

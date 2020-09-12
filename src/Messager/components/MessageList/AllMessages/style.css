@@ -172,3 +172,24 @@
   z-index: 100;
 }
 
+.emoji-mart-bar {
+  display: none;
+ }
+ .emoji-mart-scroll {
+  overflow: auto;
+  height: auto;
+ }
+ .emoji-mart-category-label {
+  display: none;
+ }
+ .emoji-mart-search {
+  display: none;
+ }
+ .emoji-mart-anchors {
+  display: none;
+ }
+ .emoji-mart {
+  z-index: 999;
+  display: block;
+  border-radius: 50px;
+ }
