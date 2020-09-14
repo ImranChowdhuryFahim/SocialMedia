@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const MoreActionItem = ({ actionName, children }) => {
+const MoreActionItem = ({ actionName, action, children }) => {
   return (
     <div
       className="more-action-item"
@@ -9,6 +9,7 @@ const MoreActionItem = ({ actionName, children }) => {
       aria-expanded="true"
       role="button"
       tabIndex="0"
+      onClick={action}
     >
       {actionName}
       {children}

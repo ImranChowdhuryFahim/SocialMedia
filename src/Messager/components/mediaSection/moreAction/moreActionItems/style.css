@@ -19,3 +19,10 @@
 .more-action-item:hover {
   cursor: pointer;
 }
+
+.modal-div {
+  background-color: blue;
+}
+.modal-div:focus {
+  background-color: bisque;
+}

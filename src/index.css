@@ -9,3 +9,31 @@ body {
 #root {
   height: 100%;
 }
+
+#modal {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding: 10px;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+
+  z-index: 10;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal:empty {
+  display: none;
+}
+
+#modal:focus {
+  background-color: red;
+  border: 5px solid peru;
+}
