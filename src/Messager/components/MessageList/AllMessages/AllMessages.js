@@ -2,7 +2,7 @@ import React, { useContext,useRef , useEffect} from "react";
 import "./style.css";
 import { ChatContext } from "../../../data";
 import { ThemeContext } from "../../providers/ThemeContext";
-import MessageDiv from "./MessageDiv";
+import MessageDiv from "./MessageDiv/MessageDiv";
 
 const AllMessages = () => {
   const messagesEnd = useRef(null);

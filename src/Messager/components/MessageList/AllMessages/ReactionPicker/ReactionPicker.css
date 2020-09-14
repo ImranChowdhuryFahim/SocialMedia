@@ -1,0 +1,32 @@
+.ReactionContainer{
+    position: absolute;
+    display: block;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, .1);
+    height: 44px;
+    z-index: 999;
+    background-color: white;
+    line-height: 1.28;
+    
+}
+
+.ReactionPickerContainer{
+    display: flex;
+    font-size: 30px;
+    line-height: 0;
+    padding: 7px 5px;
+}
+
+.Reaction{
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    height: 30px;
+    width: 30px;
+}
+
+.Reaction:hover{
+    transform: scale(1.2) translateY(-5px) ;
+    transition: ease-in .1s;
+    
+}
