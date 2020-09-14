@@ -1,3 +1,4 @@
+
 .all-messages {
   background-color: rgb(255, 255, 255);
   overflow: hidden;
@@ -5,24 +6,28 @@
 
 .all-messages:hover{
   overflow-y: scroll;
+  overflow-y: overlay;
 }
 
-*::-webkit-scrollbar-track
+.all-messages::-webkit-scrollbar-track
 {
+    
     border-radius: 10px;
     border: none;
     background-color: #ffffff;
     
 }
 
-*::-webkit-scrollbar
+.all-messages::-webkit-scrollbar
 {
+  
     width: 7px;
     background-color: #ffffff;
 }
 
-*::-webkit-scrollbar-thumb
+.all-messages::-webkit-scrollbar-thumb
 {
+  
     border-radius: 10px;
     background-color: rgb(153, 149, 149);
     
@@ -56,9 +61,7 @@
   margin-bottom: 5px;
   display: block;
   position: relative;
-  border-top-right-radius: 1.3em;
-  border-bottom-left-radius: 1.3em;
-  border-top-left-radius: 1.3em;
+  border-radius: 1.3em;
   max-width: 70%;
   font-size: 15px;
   float: right;
@@ -98,13 +101,6 @@
   display: inline-flex !important;
 }
 
-/* .msgrowsent:active  .invisibledivsent{
-  display: inline-flex !important;
-}
-
-.msgrowrecieved:active .invisibledivrecieved{
-  display: inline-flex !important;
-} */
 
 .svgbutton{
   background: transparent;
@@ -130,7 +126,16 @@
  
 }
 
-
+.msgreaction{
+  border-radius: 20px;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, .1);
+    background-color: white;
+   z-index: 2;
+   height: 20px;
+   position: absolute;
+   display: block;
+   margin-right: -10px;
+}
 
 /* .tooltip{
   display: inline;
@@ -172,3 +177,25 @@
   z-index: 100;
 }
 
+/* .emoji-mart-bar {
+  display: none;
+ } */
+ /* .emoji-mart-scroll {
+  border-radius: 10px;
+ } */
+ /* .emoji-mart-category-label {
+  display: none;
+ } */
+ /* .emoji-mart-search {
+  display: none;
+ } */
+ /* .emoji-mart-anchors {
+  display: none;
+ } */
+ /* .emoji-mart {
+  z-index: 999;
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  
+ } */

@@ -10,12 +10,15 @@ const EmojiPicker = ({ setMessage, message, setShowEmojiPicker }) => {
   return (
     <Picker
       set="facebook"
+      perLine={6}
+      showPreview={false}
+      showSkinTones={false}
       onSelect={(emoji) => {
         setMessage(message + emoji.native);
       }}
       autoFocus={true}
       color={"red"}
-      style={{ position: "absolute", bottom: "50px", right: "20px" }}
+      style={{ position: "absolute", bottom: "76px", right: "30%" }}
     />
   );
 };
