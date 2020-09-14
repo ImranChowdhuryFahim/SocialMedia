@@ -61,9 +61,7 @@
   margin-bottom: 5px;
   display: block;
   position: relative;
-  border-top-right-radius: 1.3em;
-  border-bottom-left-radius: 1.3em;
-  border-top-left-radius: 1.3em;
+  border-radius: 1.3em;
   max-width: 70%;
   font-size: 15px;
   float: right;
