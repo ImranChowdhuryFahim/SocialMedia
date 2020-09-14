@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom'
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import ReactionPicker from '../ReactionPicker/ReactionPicker'
+import { ChatContext } from '../../../../data'
 
 class MessageDiv extends Component {
-    constructor() {
-        super()
+    constructor(props,context) {
+        super(props,context)
         this.myref = React.createRef()
         this.state = {
             active: false,
@@ -46,6 +47,7 @@ class MessageDiv extends Component {
     handleEmojiSelect(e) {
         this.setState({ emoji: e })
         this.setState({IsEmojiShowing: true})
+        this.context.updateCurrentActive(1)
     }
 
     render() {
@@ -106,4 +108,6 @@ class MessageDiv extends Component {
         )
     }
 }
+
+MessageDiv.contextType = ChatContext
 export default MessageDiv
